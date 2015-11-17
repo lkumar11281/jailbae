@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<script type="text/javascript">
+window.localStorage.setItem['like', undefined];
+if (window.localStorage.getItem['like'] = undefined) {
+window.localStorage.setItem['like', '0'];
+}
+window.localStorage.setItem['dislike', undefined];
+if (window.localStorage.getItem['dislike'] = undefined) {
+window.localStorage.setItem['dislike', '0'];
+}
+window.localStorage.setItem['like1', undefined];
+if (window.localStorage.getItem['like1'] = undefined) {
+window.localStorage.setItem['like1', '0'];
+}
+window.localStorage.setItem['dislike1', undefined];
+if (window.localStorage.getItem['dislike1'] = undefined) {
+window.localStorage.setItem['dislike1', '0'];
+}
+window.localStorage.setItem['like2', undefined];
+if (window.localStorage.getItem['like2'] = undefined) {
+window.localStorage.setItem['like2', '0'];
+}
+window.localStorage.setItem['dislike2', undefined];
+if (window.localStorage.getItem['dislike2'] = undefined) {
+window.localStorage.setItem['dislike2', '0'];
+}
+function checkAuth(req, res, next) {
+  if (!req.session.user_id) {
+    res.send('You are not authorized to view this page');
+  } else {
+    next();
+  }
+}
+</script>
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>JAILBAE DOT COM FOR CROOKS WIT GOOD LOOKS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/blog-home.css" rel="stylesheet">
+
+	
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a>
+                    </li>
+                    <li><a href="#services">Services</a>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+
+                <!-- blog entry -->
+                <h1><a href="#">JAILBAE DOT COM 4 CROOKS WIT GOOD LOOKZ</a>
+                </h1>
+                
+                <hr>
+                <p>
+                    <span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+                <hr>
+                <img src="http://www.thesmokinggun.com/sites/default/files/imagecache/670xX/photos/Classics20100713190008.jpg" class="img-responsive">
+                <hr>
+                <p>HIS GRILL GLEAMING DOE... BAE OR NAH!?!</p>
+				<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.js"></script>
+				<div id="likes">
+					<span class="figure"></span>
+				</div>
+                <button type="button" id="like">BAE</button>
+				<script type="text/javascript">
+				/*app.post('/login', function (req, res) {
+													var post = req.body;
+														if (post.user === 'john' && post.password === 'johnspassword') {
+																req.session.user_id = johns_user_id_here;
+																res.redirect('/my_secret_page');
+														} else {
+																res.send('Bad user/pass');
+															}
+				});
+				app.get('/logout', function (req, res) {
+														delete req.session.user_id;
+														res.redirect('/login');
+				});*/      
+				var holder = parseInt(window.localStorage['like']|| '0', 10);
+				//alert(holder);	
+				var clicks = holder;
+				//console.log(clicks);
+				$("#like").one("click",function(){ clicks++;
+				window.localStorage['like'] = clicks;
+				//document.getElementById("like").value = parseInt(localStorage.getItem["like"] || 0) + 1; 
+				//var shaft = localStorage.getItem["like"];
+				//clicks = shaft; 
+				//window.localStorage['like'] = clicks;
+				//console.log(localStorage.getItem("like"));
+				document.getElementById('dislike').disabled = true;
+				document.getElementById("like").disabled=true;
+				setTimeout('document.getElementById("like").disabled=false;',60000);
+				$('.figure').html(clicks);});
+				
+								
+				</script>
+				<div id="dislikes">
+					<span class="figure1"></span>
+				</div>
+                 <button type="button" id="dislike">NAH</button>
+                <script type="text/javascript">
+				var holder1 = parseInt(window.localStorage['dislike']|| '0', 10);
+				//console.log(holder1);
+				var clicks1 = holder1;
+				$("#dislike").one("click",function(){ clicks1++; 
+				window.localStorage['dislike'] = clicks1;
+				document.getElementById('like').disabled = true;
+				document.getElementById("dislike").disabled=true;
+				setTimeout('document.getElementById("dislike").disabled=false;',60000);
+				$('.figure1').html(clicks1);});
+				</script>
+                <hr>
+                
+
+      
+                <!-- second blog entry -->
+                <p>
+                    <span class="glyphicon glyphicon-time"></span> Posted on May 5, 2015 at 10:00 PM</p>
+                <hr>
+                <img src="http://www.thewordofmatus.com/wp-content/uploads/2011/08/Funny-mug-shots-man-photo-image-pic.jpg" class="img-responsive">
+                <hr>
+                <p>Trying to eat metal seemed like a good idea at the time. Bae or Nah!</p>
+				<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.js"></script>
+				<div id="likes">
+					<span class="figure2"></span>
+				</div>
+                <button type="button" id="like1">BAE</button>
+				<script type="text/javascript">
+				/*app.post('/login', function (req, res) {
+														var post = req.body;
+														if (post.user === 'john' && post.password === 'johnspassword') {
+																req.session.user_id = johns_user_id_here;
+																res.redirect('/my_secret_page');
+														} else {
+																res.send('Bad user/pass');
+															}
+				});
+				app.get('/logout', function (req, res) {
+														delete req.session.user_id;
+														res.redirect('/login');
+				}); */  
+				var holder2 = 10;
+				//alert(holder2);
+				//alert(window.localStorage['like1']);
+				holder2 = parseInt(window.localStorage['like1']|| '0', 10);
+				//alert(holder2);	
+				var clicks12 = holder2;
+				//console.log(clicks12);
+				$("#like1").one("click",function(){ clicks12++;
+				window.localStorage["like1"] = clicks12;
+				//document.getElementById("like1").value = parseInt(localStorage.getItem["like1"] || 0) + 1; 
+				//var shaft = parseInt(localStorage.getItem["like1"]);
+				//clicks12 = shaft; 
+				//window.localStorage['like1'] = clicks12;
+				//console.log(localStorage.getItem("like1"));
+				document.getElementById('dislike1').disabled = true;
+				document.getElementById('like1').disabled = true;
+				setTimeout('document.getElementById("like1").disabled=false;',60000);
+				$('.figure2').html(clicks12);});
+				
+								
+				</script>
+				<div id="dislikes">
+					<span class="figure4"></span>
+				</div>
+                 <button type="button" id="dislike1">NAH</button>
+                <script type="text/javascript">
+				var holder3 = parseInt(window.localStorage['dislike1']|| '0', 10);
+				//console.log(holder1);
+				var clicks13 = holder3;
+				$("#dislike1").one("click",function(){ clicks13++; 
+				window.localStorage['dislike1'] = clicks13;
+				document.getElementById('like1').disabled = true;
+				document.getElementById("dislike1").disabled=true;
+				setTimeout('document.getElementById("dislike1").disabled=false;',60000);
+				$('.figure4').html(clicks13);});
+				</script>
+                <hr>
+                
+
+
+                <!-- third blog entry -->
+                <h1><a href="#">Third Blog Post Entry</a>
+                </h1>
+               <p>
+                    <span class="glyphicon glyphicon-time"></span> Posted on May 5, 2015 at 10:00 PM</p>
+                <hr>
+                <img src="http://o.aolcdn.com/dims-global/dims3/GLOB/resize/550x600/http://www.blogcdn.com/www.mandatory.com/media/2012/05/best-mug-shots-53.jpg" class="img-responsive">
+                <hr>
+                <p>"Did I grow the mustache in the right place?". Bae or Nah!</p>
+                <div id="likes">
+					<span class="figure"></span>
+				</div>
+                <button type="button" id="like2">BAE</button>
+				<script type="text/javascript">
+				/*app.post('/login', function (req, res) {
+													var post = req.body;
+														if (post.user === 'john' && post.password === 'johnspassword') {
+																req.session.user_id = johns_user_id_here;
+																res.redirect('/my_secret_page');
+														} else {
+																res.send('Bad user/pass');
+															}
+				});
+				app.get('/logout', function (req, res) {
+														delete req.session.user_id;
+														res.redirect('/login');
+				});*/      
+				var holder = parseInt(window.localStorage['like2']|| '0', 10);
+				//alert(holder);	
+				var clicks = holder;
+				//console.log(clicks);
+				$("#like2").one("click",function(){ clicks++;
+				window.localStorage['like2'] = clicks;
+				//document.getElementById("like").value = parseInt(localStorage.getItem["like"] || 0) + 1; 
+				//var shaft = localStorage.getItem["like"];
+				//clicks = shaft; 
+				//window.localStorage['like'] = clicks;
+				//console.log(localStorage.getItem("like"));
+				document.getElementById('dislike2').disabled = true;
+				document.getElementById("like2").disabled=true;
+				setTimeout('document.getElementById("like2").disabled=false;',60000);
+				$('.figure').html(clicks);});
+				
+								
+				</script>
+				<div id="dislikes">
+					<span class="figure1"></span>
+				</div>
+                 <button type="button" id="dislike2">NAH</button>
+                <script type="text/javascript">
+				var holder1 = parseInt(window.localStorage['dislike2']|| '0', 10);
+				//console.log(holder1);
+				var clicks1 = holder1;
+				$("#dislike2").one("click",function(){ clicks1++; 
+				window.localStorage['dislike2'] = clicks1;
+				document.getElementById('like2').disabled = true;
+				document.getElementById("dislike2").disabled=true;
+				setTimeout('document.getElementById("dislike2").disabled=false;',60000);
+				$('.figure1').html(clicks1);});
+				</script>
+                <hr>
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Jailbae 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>

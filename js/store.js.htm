@@ -1,0 +1,1301 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>marcuswestin/store.js · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="marcuswestin/store.js" name="twitter:title" /><meta content="store.js - localStorage wrapper for all browsers without using cookies or flash. Uses localStorage, globalStorage, and userData behavior under the hood" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/131967?v=3&amp;s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/131967?v=3&amp;s=400" property="og:image" /><meta content="marcuswestin/store.js" property="og:title" /><meta content="https://github.com/marcuswestin/store.js" property="og:url" /><meta content="store.js - localStorage wrapper for all browsers without using cookies or flash. Uses localStorage, globalStorage, and userData behavior under the hood" property="og:description" />
+
+      <meta name="browser-stats-url" content="/_stats">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="47CABF1B:2029:BD6C5AA:54D1D61E" name="octolytics-dimension-request_id" />
+    
+    <meta content="Rails, view, files#disambiguate" name="analytics-event" />
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="ZyX3dJCcAKAVLCYf2wMBS8fqIOtbcE3hdTJtW3qtGuid8x9CW0TrgYZNoSq1lLWCm6o4JoLFS4JO3g0PpjtS2g==" name="csrf-token" />
+
+    <link href="https://assets-cdn.github.com/assets/github-e3321d79480f0738576ff81cb2f3f717fdbb0bf35ea5938c30005a3349371133.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://assets-cdn.github.com/assets/github2-10aeef747b2ab7e964c328c6d927d9a9ea0ed65ef6e87855c969c38f29fccd4a.css" media="all" rel="stylesheet" type="text/css" />
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="831e11d1b5d6529f8ecb08fd8ef540dc">
+
+      
+  <meta name="description" content="store.js - localStorage wrapper for all browsers without using cookies or flash. Uses localStorage, globalStorage, and userData behavior under the hood">
+  <meta name="go-import" content="github.com/marcuswestin/store.js git https://github.com/marcuswestin/store.js.git">
+
+  <meta content="131967" name="octolytics-dimension-user_id" /><meta content="marcuswestin" name="octolytics-dimension-user_login" /><meta content="743723" name="octolytics-dimension-repository_id" /><meta content="marcuswestin/store.js" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="743723" name="octolytics-dimension-repository_network_root_id" /><meta content="marcuswestin/store.js" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/marcuswestin/store.js/commits/master.atom" rel="alternate" title="Recent Commits to store.js:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out  env-production windows vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" ga-data-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="button primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="button" href="/login?return_to=%2Fmarcuswestin%2Fstore.js" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <form accept-charset="UTF-8" action="/marcuswestin/store.js/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/marcuswestin/store.js/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <input type="text"
+    class="js-site-search-field is-clearable"
+    data-hotkey="s"
+    name="q"
+    placeholder="Search"
+    data-global-scope-placeholder="Search GitHub"
+    data-repo-scope-placeholder="Search"
+    tabindex="1"
+    autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+
+  <li>
+      <a href="/login?return_to=%2Fmarcuswestin%2Fstore.js"
+    class="minibutton with-count star-button tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/marcuswestin/store.js/stargazers">
+      3,081
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fmarcuswestin%2Fstore.js"
+        class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+      <a href="/marcuswestin/store.js/network" class="social-count">
+        387
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/marcuswestin" class="url fn" itemprop="url" rel="author"><span itemprop="title">marcuswestin</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/marcuswestin/store.js" class="js-current-repository" data-pjax="#js-repo-pjax-container">store.js</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation ">
+        <div class="repository-sidebar clearfix">
+            
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/marcuswestin/store.js/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/marcuswestin/store.js" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /marcuswestin/store.js">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="/marcuswestin/store.js/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /marcuswestin/store.js/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="js-issue-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+      <a href="/marcuswestin/store.js/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /marcuswestin/store.js/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/marcuswestin/store.js/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /marcuswestin/store.js/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/marcuswestin/store.js/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /marcuswestin/store.js/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+              <div class="only-with-full-nav">
+                
+  
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/marcuswestin/store.js.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/marcuswestin/store.js" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<p class="clone-options">You can clone with
+  <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a> or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+
+  <a href="http://windows.github.com" class="minibutton sidebar-button" title="Save marcuswestin/store.js to your computer and use it in GitHub Desktop." aria-label="Save marcuswestin/store.js to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+                <a href="/marcuswestin/store.js/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download the contents of marcuswestin/store.js as a zip file"
+                   title="Download the contents of marcuswestin/store.js as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+<span id="js-show-full-navigation"></span>
+
+<div class="repository-meta js-details-container ">
+    <div class="repository-description">
+      localStorage wrapper for all browsers without using cookies or flash. Uses localStorage, globalStorage, and userData behavior under the hood
+    </div>
+
+    <div class="repository-website">
+      <p><a href="http://twitter.com/marcuswestin" rel="nofollow">http://twitter.com/marcuswestin</a></p>
+    </div>
+
+
+</div>
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/marcuswestin/store.js/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              247
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/marcuswestin/store.js/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            3
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/marcuswestin/store.js/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            23
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/marcuswestin/store.js/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      23
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/marcuswestin/store.js/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">100%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="tooltipped tooltipped-s" aria-label="Show language statistics">
+    <a href="#"
+     class="repository-lang-stats-graph js-toggle-lang-stats"
+     style="background-color:#f1e05a">
+  <span class="language-color" style="width:100%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+    </a>
+  </div>
+
+<include-fragment src="/marcuswestin/store.js/show_partial?partial=recently_touched_branches_list"></include-fragment>
+
+<div class="file-navigation in-mid-page">
+  <a href="/marcuswestin/store.js/find/master"
+        class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s right"
+        data-pjax
+        data-hotkey="t"
+        aria-label="Quickly jump between files">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+    <a href="/marcuswestin/store.js/compare" aria-label="Compare, review, create a pull request" class="minibutton primary tooltipped tooltipped-s left compare-button" aria-label="Compare &amp; review" data-pjax>
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    title="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/firefox-2-and-3-support"
+                 data-name="firefox-2-and-3-support"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="firefox-2-and-3-support">firefox-2-and-3-support</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/gh-pages"
+                 data-name="gh-pages"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="gh-pages">gh-pages</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/master"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.17"
+                 data-name="v1.3.17"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.17">v1.3.17</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.16"
+                 data-name="v1.3.16"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.16">v1.3.16</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.15"
+                 data-name="v1.3.15"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.15">v1.3.15</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.14"
+                 data-name="v1.3.14"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.14">v1.3.14</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.13"
+                 data-name="v1.3.13"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.13">v1.3.13</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.12"
+                 data-name="v1.3.12"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.12">v1.3.12</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.11"
+                 data-name="v1.3.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.11">v1.3.11</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.10"
+                 data-name="v1.3.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.10">v1.3.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.9"
+                 data-name="v1.3.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.9">v1.3.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.8"
+                 data-name="v1.3.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.8">v1.3.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.7"
+                 data-name="v1.3.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.7">v1.3.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.6"
+                 data-name="v1.3.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.6">v1.3.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.5-firefox-2-and-3-support"
+                 data-name="v1.3.5-firefox-2-and-3-support"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.5-firefox-2-and-3-support">v1.3.5-firefox-2-and-3-support</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.5"
+                 data-name="v1.3.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.5">v1.3.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.4"
+                 data-name="v1.3.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.4">v1.3.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.3"
+                 data-name="v1.3.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.3">v1.3.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.2"
+                 data-name="v1.3.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.2">v1.3.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.1"
+                 data-name="v1.3.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.1">v1.3.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.3.0"
+                 data-name="v1.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.3.0">v1.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.2.0"
+                 data-name="v1.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.2.0">v1.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.1.1"
+                 data-name="v1.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.1.1">v1.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.1.0"
+                 data-name="v1.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.1.0">v1.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marcuswestin/store.js/tree/v1.0.3"
+                 data-name="v1.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.0.3">v1.0.3</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/marcuswestin/store.js" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">store.js</span></a></span></span><span class="separator">/</span><a aria-label="You must be signed in to make or propose changes" class="octicon-button disabled tooltipped tooltipped-e" href="#"><span class="octicon octicon-plus"></span></a></div>
+</div>
+
+
+
+  
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/marcuswestin/store.js/commit/2bf1f74eb604284ba7a20237559cf806cceaf196" class="message" data-pjax="true" title="v1.3.17">v1.3.17</a>
+        
+    </p>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="2bf1f74eb604284ba7a20237559cf806cceaf196" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="/marcuswestin/store.js/commit/2bf1f74eb604284ba7a20237559cf806cceaf196" class="sha-block" data-pjax>latest commit <span class="sha">2bf1f74eb6</span></a>
+
+      <div class="authorship">
+        <img alt="Marcus Westin" class="avatar" data-user="131967" height="20" src="https://avatars1.githubusercontent.com/u/131967?v=3&amp;s=40" width="20" />
+        <span class="author-name"><a href="/marcuswestin" rel="author">marcuswestin</a></span>
+        authored <time class="updated" datetime="2014-11-24T01:42:50Z" is="relative-time">Nov 23, 2014</time>
+
+      </div>
+    </div>
+  </div>
+
+  
+<include-fragment class="file-wrap" src="/marcuswestin/store.js/file-list/master">
+
+  <table class="files" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-3c3629e647f5ddf82548912e337bea9826b434af" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/beee222007920cdae265f69588adc2c4963e3892" class="message" data-pjax="true" title="Use uglifyjs to minify store.min.js and store+json.min.js, and add a build script to make building easier">Use uglifyjs to minify store.min.js and store+json.min.js, and add a …</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2012-01-14T18:32:14Z" is="time-ago">Jan 14, 2012</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/Changelog" class="js-directory-link" id="c49182dc0c7a70b9cd2e10853d9ec6c7-b09fdded1559f367154393d8b24c21256c1d639b" title="Changelog">Changelog</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/2bf1f74eb604284ba7a20237559cf806cceaf196" class="message" data-pjax="true" title="v1.3.17">v1.3.17</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-24T01:42:50Z" is="time-ago">Nov 23, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/LICENSE" class="js-directory-link" id="9879d6db96fd29134fc802214163b95a-e9f572f70ae8d903162d0aae86f3df6ba2e4825e" title="LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/baf3d41b7092f0bacd441b768a77650199c25fa7" class="message" data-pjax="true" title="Update copyright year. Is this really necesary?">Update copyright year. Is this really necesary?</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-05-09T10:33:57Z" is="time-ago">May 9, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/Makefile" class="js-directory-link" id="b67911656ef5d18c4ae36cb6741b7965-fe71675e8449438fe58d28bb9b07a2b7745d1e76" title="Makefile">Makefile</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/5e4d61854480bb76ac242694be3311df359280bb" class="message" data-pjax="true" title="Add a make command for me to remember to publish everything to npm. GH fix #93">Add a make command for me to remember to publish everything to npm. G…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-05-09T10:33:41Z" is="time-ago">May 9, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/README.md" class="js-directory-link" id="04c6e90faac2675aa89e2176d2eec7d8-8004b3bc1d4787a09b9d421eda1c63efe0fe6507" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/a8c5ad850bc1cc26327ca041c9d5458be553ff31" class="message" data-pjax="true" title="Note the IE7 problem figured out by @chazwr - awesome detective work! Fix #47">Note the IE7 problem figured out by</a> <a href="https://github.com/chazwr" class="user-mention">@chazwr</a> <a href="/marcuswestin/store.js/commit/a8c5ad850bc1cc26327ca041c9d5458be553ff31" class="message" data-pjax="true" title="Note the IE7 problem figured out by @chazwr - awesome detective work! Fix #47">- awesome detective work!…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-06-28T03:27:33Z" is="time-ago">Jun 27, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/bower.json" class="js-directory-link" id="0a08a7565aba4405282251491979bb6b-5f1f44ac365e080d53883f982f641f12acb50165" title="bower.json">bower.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/build.js" class="js-directory-link" id="efd59cd1bdc5c9ac6d0eaa368f1e149f-dbe49fc2189964a8e77f1df949608408bbb8e27f" title="build.js">build.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/a3e519dba619d15275276105a279b09a8e892bd8" class="message" data-pjax="true" title="Update copyright">Update copyright</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2013-09-27T20:54:34Z" is="time-ago">Sep 27, 2013</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/component.json" class="js-directory-link" id="162d38b326426c84ac91e51f931105bb-5f1f44ac365e080d53883f982f641f12acb50165" title="component.json">component.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/index.html" class="js-directory-link" id="eacf331f0ffc35d4b482f1d15a887d3b-e65bf147117ef76c50e2e9aac41fed1740b2dbe3" title="index.html">index.html</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/d1bc2450e6101468af235a79fba167cc91aa8bf6" class="message" data-pjax="true" title="add index.html page to redirect to test.html">add index.html page to redirect to test.html</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2013-03-13T21:47:06Z" is="time-ago">Mar 13, 2013</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/json.js" class="js-directory-link" id="75a8ec82affa123004e2780ce07349f7-c52b92aa61c8267ceee7504ce9ef51913f377216" title="json.js">json.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/1611fa57ebff6e3339a8b699ecaafcf102726aa1" class="message" data-pjax="true" title="Use JSON for serialization of values put into local storage using store.js.
+
+This addresses Issue 2, which was closed earlier as a won&#39;t-fix before I wisened up.
+
+Thanks eddorre and jdunck for similar patches">Use JSON for serialization of values put into local storage using sto…</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-07-02T05:01:20Z" is="time-ago">Jul 1, 2010</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/package.json" class="js-directory-link" id="b9cfc7f2cdf78a7f4b91a753d10865a2-57d7a82a17bde5d5312de9b82e5c976eb63f9ef4" title="package.json">package.json</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/2bf1f74eb604284ba7a20237559cf806cceaf196" class="message" data-pjax="true" title="v1.3.17">v1.3.17</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-24T01:42:50Z" is="time-ago">Nov 24, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/store%2Bjson2.min.js" class="js-directory-link" id="8d670c414f1ebbb15986fc0dc196c669-d29e7068dd2adfca0c10b0a0cf7367d63865b736" title="store+json2.min.js">store+json2.min.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/2bf1f74eb604284ba7a20237559cf806cceaf196" class="message" data-pjax="true" title="v1.3.17">v1.3.17</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-24T01:42:50Z" is="time-ago">Nov 24, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/store.js" class="js-directory-link" id="8b3d2f22fc7e4f74eeb25762947f7c36-cfedd3675b228d4c68bbc7b8226a0109b6d401b0" title="store.js">store.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/666ef71b21655d84fc7b10d454a13535d7e28405" class="message" data-pjax="true" title="Add store.version">Add store.version</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-24T01:42:37Z" is="time-ago">Nov 23, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/store.min.js" class="js-directory-link" id="96570c5372a87206dee462a59c5477f4-4e3ce7e21820d4a88a6eb7c6a48cb9799c06072c" title="store.min.js">store.min.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/2bf1f74eb604284ba7a20237559cf806cceaf196" class="message" data-pjax="true" title="v1.3.17">v1.3.17</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-24T01:42:50Z" is="time-ago">Nov 24, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/test-node.js" class="js-directory-link" id="1923f9d9a2239319aa43ea840264688d-dd2f32fdec6008b783ab3a54fb79ee93416ad1b9" title="test-node.js">test-node.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/f7ab668e728db9fccd19c28fba56941c614aea74" class="message" data-pjax="true" title="add support for running tests in node.js">add support for running tests in node.js</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2013-05-29T20:23:00Z" is="time-ago">May 29, 2013</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/test.html" class="js-directory-link" id="eac0a7ec83537763d3ba7671828d0989-a55a11729ef094928e742c0926d54d0640302c8d" title="test.html">test.html</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/f7ab668e728db9fccd19c28fba56941c614aea74" class="message" data-pjax="true" title="add support for running tests in node.js">add support for running tests in node.js</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2013-05-29T20:23:00Z" is="time-ago">May 29, 2013</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/marcuswestin/store.js/blob/master/tests.js" class="js-directory-link" id="ce4097fa41097a3b63603226458faf55-87cd19da069d7b7eada42c1baab79fedcb0ecbb6" title="tests.js">tests.js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/marcuswestin/store.js/commit/7733d806e0ba102bae0aa2b5e62b7ee77f90ba5e" class="message" data-pjax="true" title="Add store.get default value">Add store.get default value</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-11-24T01:39:39Z" is="time-ago">Nov 23, 2014</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</include-fragment>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a id="user-content-storejs" class="anchor" href="#storejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>store.js</h1>
+
+<p>store.js exposes a simple API for cross browser local storage</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-c">// Store 'marcus' at 'username'</span>
+store.set(<span class="pl-s1"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>marcus<span class="pl-pds">'</span></span>)
+
+<span class="pl-c">// Get 'username'</span>
+store.get(<span class="pl-s1"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>)
+
+<span class="pl-c">// Remove 'username'</span>
+store.<span class="pl-s3">remove</span>(<span class="pl-s1"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span>)
+
+<span class="pl-c">// Clear all keys</span>
+store.<span class="pl-s3">clear</span>()
+
+<span class="pl-c">// Store an object literal - store.js uses JSON.stringify under the hood</span>
+store.set(<span class="pl-s1"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>, { name<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>marcus<span class="pl-pds">'</span></span>, likes<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>javascript<span class="pl-pds">'</span></span> })
+
+<span class="pl-c">// Get the stored object - store.js uses JSON.parse under the hood</span>
+<span class="pl-s">var</span> user <span class="pl-k">=</span> store.get(<span class="pl-s1"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>)
+<span class="pl-s3">alert</span>(user.<span class="pl-sc">name</span> <span class="pl-k">+</span> <span class="pl-s1"><span class="pl-pds">'</span> likes <span class="pl-pds">'</span></span> <span class="pl-k">+</span> user.likes)
+
+<span class="pl-c">// Get all stored values</span>
+store.getAll().user.<span class="pl-sc">name</span> <span class="pl-k">==</span> <span class="pl-s1"><span class="pl-pds">'</span>marcus<span class="pl-pds">'</span></span>
+
+<span class="pl-c">// Loop over all stored values</span>
+store.forEach(<span class="pl-st">function</span>(<span class="pl-vpf">key</span>, <span class="pl-vpf">val</span>) {
+    <span class="pl-en">console</span><span class="pl-s3">.log</span>(key, <span class="pl-s1"><span class="pl-pds">'</span>==<span class="pl-pds">'</span></span>, val)
+})</pre></div>
+
+<h2>
+<a id="user-content-how-does-it-work" class="anchor" href="#how-does-it-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does it work?</h2>
+
+<p>store.js uses localStorage when available, and falls back on the userData behavior in IE6 and IE7. No flash to slow down your page load. No cookies to fatten your network requests.</p>
+
+<p>store.js depends on JSON for serialization to disk.</p>
+
+<h2>
+<a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Just grab <a href="https://raw.github.com/marcuswestin/store.js/master/store.min.js">store.min.js</a> or <a href="https://raw.github.com/marcuswestin/store.js/master/store+json2.min.js">store+json2.min.js</a> and include them with a script tag.</p>
+
+<h2>
+<a id="user-content-storeenabled-flag" class="anchor" href="#storeenabled-flag" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<code>store.enabled</code> flag</h2>
+
+<p>If your product depends on store.js, you must check the <code>store.enabled</code> flag first:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>store.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-s2">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">    init()</span>
+<span class="pl-s2">    <span class="pl-st">function</span> <span class="pl-en">init</span>() {</span>
+<span class="pl-s2">        <span class="pl-k">if</span> (<span class="pl-k">!</span>store.enabled) {</span>
+<span class="pl-s2">            <span class="pl-s3">alert</span>(<span class="pl-s1"><span class="pl-pds">'</span>Local storage is not supported by your browser. Please disable "Private Mode", or upgrade to a modern browser.<span class="pl-pds">'</span></span>)</span>
+<span class="pl-s2">            <span class="pl-k">return</span></span>
+<span class="pl-s2">        }</span>
+<span class="pl-s2">        <span class="pl-s">var</span> user <span class="pl-k">=</span> store.get(<span class="pl-s1"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>)</span>
+<span class="pl-s2">        <span class="pl-c">// ... and so on ...</span></span>
+<span class="pl-s2">    }</span>
+<span class="pl-s2">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>LocalStorage may sometimes appear to be available but throw an error when used. An example is Safari's private browsing mode. Other browsers allow the user to temporarily disable localStorage. Store.js detects these conditions and sets the <code>store.enabled</code> flag appropriately.</p>
+
+<h2>
+<a id="user-content-screencast" class="anchor" href="#screencast" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screencast</h2>
+
+<p><a href="http://javascriptplayground.com/blog/2012/06/javascript-local-storage-store-js-tutorial">Introductory Screencast to Store.js</a> by Jack Franklin.</p>
+
+<h2>
+<a id="user-content-contributors--forks" class="anchor" href="#contributors--forks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors &amp; Forks</h2>
+
+<p>Contributors: <a href="https://github.com/marcuswestin/store.js/graphs/contributors">https://github.com/marcuswestin/store.js/graphs/contributors</a></p>
+
+<p>Forks: <a href="https://github.com/marcuswestin/store.js/network/members">https://github.com/marcuswestin/store.js/network/members</a></p>
+
+<h2>
+<a id="user-content-in-nodejs" class="anchor" href="#in-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>In node.js</h2>
+
+<p>store.js works as expected in node.js, assuming that global.localStorage has been set:</p>
+
+<pre><code>global.localStorage = require('localStorage')
+var store = require('./store')
+store.set('foo', 1)
+console.log(store.get('foo'))
+</code></pre>
+
+<h2>
+<a id="user-content-supported-browsers" class="anchor" href="#supported-browsers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported browsers</h2>
+
+<ul class="task-list">
+<li>Tested in iOS 4</li>
+<li>Tested in iOS 5</li>
+<li>Tested in iOS 6</li>
+<li>Tested in Firefox 3.5</li>
+<li>Tested in Firefox 3.6</li>
+<li>Tested in Firefox 4.0+</li>
+<li>Support dropped for Firefox &lt; 3.5 (see notes below)</li>
+<li>Tested in Chrome 5</li>
+<li>Tested in Chrome 6</li>
+<li>Tested in Chrome 7</li>
+<li>Tested in Chrome 8</li>
+<li>Tested in Chrome 10</li>
+<li>Tested in Chrome 11+</li>
+<li>Tested in Safari 4</li>
+<li>Tested in Safari 5</li>
+<li>Tested in IE6</li>
+<li>Tested in IE7</li>
+<li>Tested in IE8</li>
+<li>Tested in IE9</li>
+<li>Tested in IE10</li>
+<li>Tested in Opera 10</li>
+<li>Tested in Opera 11</li>
+<li>Tested in Opera 12</li>
+<li>Tested in Node.js v0.10.4 (with <a href="https://github.com/coolaj86/node-localStorage">https://github.com/coolaj86/node-localStorage</a> 1.0.2)</li>
+</ul>
+
+<p><em>Private mode</em> Store.js may not work while browsing in private mode. This is as it should be. Check the <code>store.enabled</code> flag before relying on store.js.</p>
+
+<p><em>Saucelabs.com rocks</em> Extensive browser testing of store.js is possible thanks to Saucelabs.com. Check them out, they're awesome.</p>
+
+<p><em>Firefox 3.0 &amp; 2.0:</em> Support for FF 2 &amp; 3 was dropped in v1.3.6. If you require support for ancient versions of FF, use v1.3.5 of store.js.</p>
+
+<p><em>Important note:</em> In IE6 and IE7, many special characters are not allowed in the keys used to store any key/value pair. With <a href="https://github.com/mferretti">@mferretti</a>'s help, there's a suitable workaround which replaces most forbidden characters with "___".</p>
+
+<h2>
+<a id="user-content-storage-limits" class="anchor" href="#storage-limits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Storage limits</h2>
+
+<ul class="task-list">
+<li>IE6 &amp; IE7: 1MB total, but 128kb per "path" or "document" (see <a href="http://msdn.microsoft.com/en-us/library/ms531424(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/ms531424(v=vs.85).aspx</a>)</li>
+<li>See <a href="http://dev-test.nemikor.com/web-storage/support-test/">http://dev-test.nemikor.com/web-storage/support-test/</a> for a list of limits per browser</li>
+</ul>
+
+<h2>
+<a id="user-content-unsupported-browsers" class="anchor" href="#unsupported-browsers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unsupported browsers</h2>
+
+<ul class="task-list">
+<li>Firefox 1.0: no means (beside cookies and flash)</li>
+<li>Safari 2: no means (beside cookies and flash)</li>
+<li>Safari 3: no synchronous api (has asynch sqlite api, but store.js is synch)</li>
+<li>Opera 9: don't know if there is synchronous api for storing data locally</li>
+<li>Firefox 1.5: don't know if there is synchronous api for storing data locally</li>
+<li>Microsoft IIS &amp; IE7: With meta tag &amp; "charset=iso-8859-1", things stop working. See issue #47.</li>
+</ul>
+
+<h2>
+<a id="user-content-some-notes-on-serialization" class="anchor" href="#some-notes-on-serialization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some notes on serialization</h2>
+
+<p>localStorage, when used without store.js, calls toString on all stored values. This means that you can't conveniently store and retrieve numbers, objects or arrays:</p>
+
+<div class="highlight highlight-js"><pre>localStorage.myage <span class="pl-k">=</span> <span class="pl-c1">24</span>
+localStorage.myage <span class="pl-k">!==</span> <span class="pl-c1">24</span>
+localStorage.myage <span class="pl-k">===</span> <span class="pl-s1"><span class="pl-pds">'</span>24<span class="pl-pds">'</span></span>
+
+localStorage.user <span class="pl-k">=</span> { name<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>marcus<span class="pl-pds">'</span></span>, likes<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>javascript<span class="pl-pds">'</span></span> }
+localStorage.user <span class="pl-k">===</span> <span class="pl-s1"><span class="pl-pds">"</span>[object Object]<span class="pl-pds">"</span></span>
+
+localStorage.<span class="pl-sc">tags</span> <span class="pl-k">=</span> [<span class="pl-s1"><span class="pl-pds">'</span>javascript<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>localStorage<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>store.js<span class="pl-pds">'</span></span>]
+localStorage.<span class="pl-sc">tags</span>.<span class="pl-sc">length</span> <span class="pl-k">===</span> <span class="pl-c1">32</span>
+localStorage.<span class="pl-sc">tags</span> <span class="pl-k">===</span> <span class="pl-s1"><span class="pl-pds">"</span>javascript,localStorage,store.js<span class="pl-pds">"</span></span></pre></div>
+
+<p>What we want (and get with store.js) is</p>
+
+<div class="highlight highlight-js"><pre>store.set(<span class="pl-s1"><span class="pl-pds">'</span>myage<span class="pl-pds">'</span></span>, <span class="pl-c1">24</span>)
+store.get(<span class="pl-s1"><span class="pl-pds">'</span>myage<span class="pl-pds">'</span></span>) <span class="pl-k">===</span> <span class="pl-c1">24</span>
+
+store.set(<span class="pl-s1"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>, { name<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>marcus<span class="pl-pds">'</span></span>, likes<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>javascript<span class="pl-pds">'</span></span> })
+<span class="pl-s3">alert</span>(<span class="pl-s1"><span class="pl-pds">"</span>Hi my name is <span class="pl-pds">"</span></span> <span class="pl-k">+</span> store.get(<span class="pl-s1"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>).<span class="pl-sc">name</span> <span class="pl-k">+</span> <span class="pl-s1"><span class="pl-pds">"</span>!<span class="pl-pds">"</span></span>)
+
+store.set(<span class="pl-s1"><span class="pl-pds">'</span>tags<span class="pl-pds">'</span></span>, [<span class="pl-s1"><span class="pl-pds">'</span>javascript<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>localStorage<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>store.js<span class="pl-pds">'</span></span>])
+<span class="pl-s3">alert</span>(<span class="pl-s1"><span class="pl-pds">"</span>We've got <span class="pl-pds">"</span></span> <span class="pl-k">+</span> store.get(<span class="pl-s1"><span class="pl-pds">'</span>tags<span class="pl-pds">'</span></span>).<span class="pl-sc">length</span> <span class="pl-k">+</span> <span class="pl-s1"><span class="pl-pds">"</span> tags here<span class="pl-pds">"</span></span>)</pre></div>
+
+<p>The native serialization engine of javascript is JSON. Rather than leaving it up to you to serialize and deserialize your values, store.js uses JSON.stringify() and JSON.parse() on each call to store.set() and store.get(), respectively.</p>
+
+<p>Some browsers do not have native support for JSON. For those browsers you should include <a href="/marcuswestin/store.js/blob/master/non-minified%20copy%20is%20included%20in%20this%20repo">JSON.js</a>.</p>
+
+<h2>
+<a id="user-content-no-sessionstorageauto-expiration" class="anchor" href="#no-sessionstorageauto-expiration" aria-hidden="true"><span class="octicon octicon-link"></span></a>No sessionStorage/auto-expiration?</h2>
+
+<p>No. I believe there is no way to provide sessionStorage semantics cross browser. However, it is trivial to expire values on read on top of store.js:</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-s">var</span> storeWithExpiration <span class="pl-k">=</span> {
+    <span class="pl-en">set</span>: <span class="pl-st">function</span>(<span class="pl-vpf">key</span>, <span class="pl-vpf">val</span>, <span class="pl-vpf">exp</span>) {
+        store.set(key, { val<span class="pl-k">:</span>val, exp<span class="pl-k">:</span>exp, time<span class="pl-k">:</span><span class="pl-k">new</span> <span class="pl-en">Date</span>().<span class="pl-s3">getTime</span>() })
+    },
+    <span class="pl-en">get</span>: <span class="pl-st">function</span>(<span class="pl-vpf">key</span>) {
+        <span class="pl-s">var</span> info <span class="pl-k">=</span> store.get(key)
+        <span class="pl-k">if</span> (<span class="pl-k">!</span>info) { <span class="pl-k">return</span> <span class="pl-c1">null</span> }
+        <span class="pl-k">if</span> (<span class="pl-k">new</span> <span class="pl-en">Date</span>().<span class="pl-s3">getTime</span>() <span class="pl-k">-</span> info<span class="pl-s3">.time</span> <span class="pl-k">&gt;</span> info.exp) { <span class="pl-k">return</span> <span class="pl-c1">null</span> }
+        <span class="pl-k">return</span> info.val
+    }
+}
+storeWithExpiration.set(<span class="pl-s1"><span class="pl-pds">'</span>foo<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>bar<span class="pl-pds">'</span></span>, <span class="pl-c1">1000</span>)
+<span class="pl-s3">setTimeout</span>(<span class="pl-st">function</span>() { <span class="pl-en">console</span><span class="pl-s3">.log</span>(storeWithExpiration.get(<span class="pl-s1"><span class="pl-pds">'</span>foo<span class="pl-pds">'</span></span>)) }, <span class="pl-c1">500</span>) <span class="pl-c">// -&gt; "bar"</span>
+<span class="pl-s3">setTimeout</span>(<span class="pl-st">function</span>() { <span class="pl-en">console</span><span class="pl-s3">.log</span>(storeWithExpiration.get(<span class="pl-s1"><span class="pl-pds">'</span>foo<span class="pl-pds">'</span></span>)) }, <span class="pl-c1">1500</span>) <span class="pl-c">// -&gt; null</span></pre></div>
+
+<h2>
+<a id="user-content-testing" class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>For a browser: Go to <a href="http://marcuswestin.github.io/store.js/test.html">http://marcuswestin.github.io/store.js/test.html</a> to test the latest version of store.js.</p>
+
+<p>For a browser, locally: do <code>npm install node-static &amp;&amp; ./node_modules/node-static/bin/cli.js</code> and go to http://localhost:8080</p>
+
+<p>(Note that test.html must be served over http:// or https://. This is because localStore does not work in some browsers when using the file:// protocol.)</p>
+
+<p>For Nodejs: do <code>npm install . localStorage &amp;&amp; node test-node.js</code></p>
+</article>
+  </div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="https://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.03954s from github-fe142-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
+      <div class="suggester-container">
+        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-2badd09f690fc93e95552ba0ecf64200a0019057d5f5c329827f78f98ea76a1c.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-b331b7d624d831151f263b1817e2f95250b354b7ed653fa1065a83008ac0b65b.js" type="text/javascript"></script>
+      
+      
+  </body>
+</html>
+
