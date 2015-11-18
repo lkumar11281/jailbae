@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@using $rootnamespace$.Areas.HelpPage.ModelDescriptions
 @model EnumTypeModelDescription
 
@@ -21,4 +22,29 @@
             </tr>
         }
     </tbody>
+=======
+﻿@using $rootnamespace$.Areas.HelpPage.ModelDescriptions
+@model EnumTypeModelDescription
+
+<p>Possible enumeration values:</p>
+
+<table class="help-page-table">
+    <thead>
+        <tr><th>Name</th><th>Value</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        @foreach (EnumValueDescription value in Model.Values)
+        {
+            <tr>
+                <td class="enum-name"><b>@value.Name</b></td>
+                <td class="enum-value">
+                    <p>@value.Value</p>
+                </td>
+                <td class="enum-description">
+                    <p>@value.Documentation</p>
+                </td>
+            </tr>
+        }
+    </tbody>
+>>>>>>> b2b3540f087401fc0f74ffc6113ab2b5b97d1a32
 </table>
